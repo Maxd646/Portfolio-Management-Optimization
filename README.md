@@ -1,4 +1,4 @@
-# 📈 Portfolio Management Optimization
+# Portfolio Management Optimization
 
 Designing, Optimizing, and Evaluating Investment Portfolios Against a 60/40 Benchmark
 
@@ -6,7 +6,7 @@ An end-to-end quantitative investment analytics pipeline that transforms raw mar
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project implements a **production-grade investment research pipeline** that:
 
@@ -18,7 +18,7 @@ This project implements a **production-grade investment research pipeline** that
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Build a modular, reproducible investment analytics system
 - Apply time-series forecasting for expected returns
@@ -28,7 +28,7 @@ This project implements a **production-grade investment research pipeline** that
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 portfolio-management-optimization/
@@ -60,7 +60,7 @@ portfolio-management-optimization/
 
 ---
 
-## 📊 Data
+## Data
 
 Market data sourced using **Yahoo Finance (YFinance)**.
 
@@ -72,7 +72,7 @@ Assets:
 
 ---
 
-## 🧠 Methods
+## Methods
 
 - Forecasting: ARIMA, LSTM
 - Optimization: Efficient Frontier, Max Sharpe, Min Volatility
@@ -81,7 +81,7 @@ Assets:
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 Python, Pandas, NumPy, SciPy  
 Statsmodels, TensorFlow  
@@ -91,7 +91,7 @@ Docker (optional)
 
 ---
 
-## 🧩 Methodology & Architecture
+## Methodology & Architecture
 
 The pipeline follows **industry-standard quantitative research workflow**:
 
@@ -121,17 +121,19 @@ The pipeline follows **industry-standard quantitative research workflow**:
 
 ---
 
-### 🏗 Architecture 
+### Architecture
+
+class diagram
 
 ## ![alt text](image.png)
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is for educational and research purposes only.  
 It does not constitute financial advice.
 
 ---
 
-## 👤 Author
+## Author
 
 Daniel Gashaw Kebede
