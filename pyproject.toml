@@ -1,0 +1,143 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmo_forcasting"
+version = "0.1.0"
+description = "Time series forecasting and portfolio optimization for data-driven investment decision making"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Tibebu K.", email = "wise.tibec@gmail.com" }
+]
+
+keywords = [
+    "portfolio-management",
+    "time-series",
+    "forecasting",
+    "arima",
+    "lstm",
+    "modern-portfolio-theory",
+    "efficient-frontier",
+    "risk-management",
+    "backtesting",
+    "quantitative-finance"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = [
+    # Core scientific stack
+    "numpy",
+    "pandas",
+    "scipy",
+    "pyaml",
+
+    # Market data
+    "yfinance",
+
+    # Visualization
+    "matplotlib",
+    "seaborn",
+
+    # Time series & statistics
+    "statsmodels",
+    "pmdarima",
+
+    # Machine learning / deep learning
+    "scikit-learn",
+    "tensorflow",
+
+    # Portfolio optimization
+    "PyPortfolioOpt",
+
+    # Utilities
+    "python-dotenv",
+    "tqdm"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+    "pre-commit",
+    "jupyter",
+    "ipykernel"
+]
+
+[project.urls]
+Homepage = "https://github.com/tib-dev/portfolio-management-optimization"
+Source = "https://github.com/tib-dev/portfolio-management-optimization"
+Documentation = "https://github.com/tib-dev/portfolio-management-optimization/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pmo_forcasting*"]
+
+# -----------------------
+# Formatting & Linting
+# -----------------------
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+exclude = '''
+/(
+    \.venv
+  | \.git
+  | data
+  | logs
+  | notebooks
+  | reports
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+src_paths = ["src"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".venv",
+    ".git",
+    "__pycache__",
+    "data",
+    "logs",
+    "notebooks",
+    "reports"
+]
+
+# -----------------------
+# Testing & Coverage
+# -----------------------
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra --cov=pmo_forcasting"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["pmo_forcasting"]
+omit = [
+    "tests/*",
+    "notebooks/*",
+    "reports/*"
+]
